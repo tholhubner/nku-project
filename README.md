@@ -1,1 +1,2 @@
-# NKU Project Repo
+# Tyler Holhubner
+# Car Blog and Social Bullying Site
