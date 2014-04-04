@@ -1,0 +1,37 @@
+<div class="row col-sm-6">
+  <%= form_for @user do |f| %>
+    <div class="form-group">
+      <%= f.label :full_name %>
+      <%= f.text_field :full_name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :username, 'Nickname' %>
+      <%= f.text_field :username, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :imageUrl, 'Image URL' %>
+      <%= f.text_field :imageUrl, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, 'Password' %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, 'Password Confirmation' %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+    </div>
+
+    <%= f.submit submit_copy, class: 'btn btn-primary' %>
+    &nbsp;or
+    <%= link_to 'Cancel', users_path %>
+  <% end %>
+</div>
