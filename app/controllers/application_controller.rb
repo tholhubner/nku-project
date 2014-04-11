@@ -8,7 +8,18 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
   
+  before_action :require_login
+  
+  skip_before_action :require_login, only: [:new, :create]
+  
   def logged_in?
     current_user != nil
+  end
+  
+  private
+  def require_login
+    unless logged_in?
+      redirect_to signin_path
+    end
   end
 end

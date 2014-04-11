@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404153851) do
+ActiveRecord::Schema.define(version: 20140411141122) do
+
+  create_table "cars", force: true do |t|
+    t.string   "make"
+    t.string   "model"
+    t.integer  "year"
+    t.string   "color"
+    t.string   "user_id"
+    t.integer  "users_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "full_name"
@@ -21,6 +32,8 @@ ActiveRecord::Schema.define(version: 20140404153851) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_confirmation"
+    t.boolean  "is_online",             default: false
   end
 
 end

@@ -1,0 +1,7 @@
+<h1><% current_user.username %></h1>
+<h3>(<% current_user.full_name %>)</h3>
+<div class="avatar pull-left" style='background-image: url(<%= current_user.profileImgUrl %>)'></div>
+<h2>User's Cars</h2>
+
+<%= link_to "New Car?", new_car_path, class: "btn btn-default navbar-btn"%>
+ 

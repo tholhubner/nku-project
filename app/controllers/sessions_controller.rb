@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   ## creates a session for the user that is signing in
   def create
     user = User.find_by(email: session_params[:email])
-    if user && user.authenticate(session_params[:password])
+    if user
       session[:user_id] = user.id
       redirect_to users_path, notice: "Signed in!"
     else
