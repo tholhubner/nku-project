@@ -1,6 +1,6 @@
 <h1><%= current_user.username %></h1>
 <h6>(<%= current_user.full_name %>)</h6>
-<div class="avatar pull-left" style='background-image: url(<%= current_user.profileImgUrl %>)'></div>
+<div><img style="width:12%;" src="<%= current_user.avatar.url %>" /></div>
 <h2><%= current_user.full_name %>'s Cars</h2>
 <table class="table">
   <tr>
@@ -8,6 +8,7 @@
     <th>Model</th>
     <th>Year</th>
     <th>Color</th>
+    <th>Image</th>
   </tr>
   <% current_user.cars.each do |car| %>
     <tr>
@@ -15,6 +16,7 @@
       <td><%= car.model %></td>
       <td><%= car.year %></td>
       <td><%= car.color %></td>
+      <td><img style="width:15%;" src="<%= car.car_image.url %>" /></td>
     </tr>
   <% end %>
 </table>

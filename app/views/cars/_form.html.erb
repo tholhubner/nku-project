@@ -1,5 +1,5 @@
 <div class="row col-sm-6">
-  <%= form_for @car do |f| %>
+  <%= form_for @car, :html => {:multipart => true} do |f| %>
     <div class="form-group">
       <%= f.label :make %>
       <%= f.text_field :make, class: 'form-control' %>
@@ -18,6 +18,11 @@
     <div class="form-group">
       <%= f.label :color, 'Color' %>
       <%= f.text_field :color, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :car_image, "Car Image" %>
+      <%= f.file_field :car_image %>
     </div>
 
     <%= f.submit class: 'btn btn-primary' %>

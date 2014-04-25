@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425194713) do
+ActiveRecord::Schema.define(version: 20140425214059) do
 
   create_table "cars", force: true do |t|
     t.string   "make"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140425194713) do
     t.integer  "user_id",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "car_image"
   end
 
   create_table "users", force: true do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140425194713) do
     t.datetime "updated_at"
     t.string   "password_confirmation"
     t.boolean  "is_online",             default: false
+    t.string   "avatar"
   end
 
 end
