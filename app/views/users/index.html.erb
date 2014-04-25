@@ -4,5 +4,17 @@
 
 <br />
 
-<h2>Newest Users</h2>
+<h2>Newest User</h2>
+<table class="table">
+    <tr>
+      <th>Username</th>
+      <th>Full Name</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <td><%= User.last.username %></td>
+      <td><%= User.last.full_name %></td>
+      <td><%= User.last.email %></td>
+    </tr>
+</table>
 <hr />

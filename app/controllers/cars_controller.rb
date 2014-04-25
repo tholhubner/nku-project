@@ -1,10 +1,10 @@
 class CarsController < ApplicationController
   def new
-    @car = Cars.new
+    @car = Car.new
   end
   
   def create
-    @car = Car.create!(car_params)
+    @car = current_user.cars.create!(car_params)
     redirect_to profile_path, notice: 'Car has been created'
   end
   

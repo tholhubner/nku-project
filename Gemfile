@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'thin'
 gem 'bcrypt'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'byebug'
