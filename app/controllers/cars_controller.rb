@@ -8,6 +8,10 @@ class CarsController < ApplicationController
     redirect_to profile_path, notice: 'Car has been created'
   end
   
+  def show
+    @car = Car.find(params[:id])
+  end
+  
   private
   ## grabs all of the required user information needed for signup
   def car_params

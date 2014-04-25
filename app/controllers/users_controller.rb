@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     redirect_to users_path, notice: 'Hi, #{@user.username}. Welcome to the Car Place.'
   end
   
+  def show
+    @user = User.find(params[:id])
+  end
+  
   private
   ## grabs all of the required user information needed for signup
   def user_params

@@ -9,7 +9,8 @@ NkuProject::Application.routes.draw do
   delete "sign_out", to: "sessions#destroy"
   get 'signin' => 'sessions#new'
   get 'signup' => 'users#new'
-  get "profile" => "users#profile"
+  get 'profile' => "users#profile"
+  get 'all_users' => "users#all"
   
   root to: "users#index"
 end

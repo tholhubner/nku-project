@@ -9,6 +9,7 @@
     <th>Year</th>
     <th>Color</th>
     <th>Image</th>
+    <th>View</th>
   </tr>
   <% current_user.cars.each do |car| %>
     <tr>
@@ -16,7 +17,8 @@
       <td><%= car.model %></td>
       <td><%= car.year %></td>
       <td><%= car.color %></td>
-      <td><img style="width:15%;" src="<%= car.car_image.url %>" /></td>
+      <td style="width:25%;"><img style="width:50%;" src="<%= car.car_image.url %>" /></td>
+      <td><%= link_to "View", car_path(car), class: "btn btn-default" %></td>
     </tr>
   <% end %>
 </table>
