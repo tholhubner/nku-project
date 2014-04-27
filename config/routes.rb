@@ -4,7 +4,9 @@ NkuProject::Application.routes.draw do
   resources :users
   resources :students
   resources :sessions
-  resources :cars
+  resources :cars do
+    resources :comments
+  end
   
   delete "sign_out", to: "sessions#destroy"
   get 'signin' => 'sessions#new'
