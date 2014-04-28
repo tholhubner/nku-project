@@ -21,7 +21,48 @@
     </div>
   
     <div class="form-group">
-      <%= f.label :car_image, "Car Image" %>
+      <%= f.label :engine_disp, 'Engine Displacement' %>
+      <%= f.text_field :engine_disp, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :horsepower, 'Horsepower' %>
+      <%= f.text_field :horsepower, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :torque, 'Torque' %>
+      <%= f.text_field :torque, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :transmission, 'Transmission Type' %>
+      <br />
+      <%= f.radio_button(:transmission, 'Automatic') %>  
+      <%= f.label(:transmission, 'Automatic') %>
+      &nbsp;
+      <%= f.radio_button(:transmission, 'Manual') %>  
+      <%= f.label(:transmission, 'Manual') %>
+      &nbsp;
+      <%= f.radio_button(:transmission, 'DSG') %>  
+      <%= f.label(:transmission, 'DSG') %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :drivetrain, 'Drivetrain Type' %>
+      <br />
+      <%= f.radio_button(:drivetrain, 'RWD') %>  
+      <%= f.label(:drivetrain, 'RWD') %>
+      &nbsp;
+      <%= f.radio_button(:drivetrain, 'AWD') %>  
+      <%= f.label(:drivetrain, 'AWD') %>
+      &nbsp;
+      <%= f.radio_button(:drivetrain, 'FWD') %>  
+      <%= f.label(:drivetrain, 'FWD') %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :car_image, 'Car Image' %>
       <%= f.file_field :car_image %>
     </div>
 
