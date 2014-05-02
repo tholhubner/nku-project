@@ -22,5 +22,18 @@
     </tr>
   <% end %>
 </table>
-<%= link_to "New Car?", new_car_path, class: "btn btn-default navbar-btn"%>
+
+<h2><%= current_user.full_name %>'s Blog Entries</h2>
+<hr />
+<% current_user.blogs.each do |blog| %>
+<h3><%= blog.title %></h3>
+<small><p><b>Published On:</b> <%= blog.created_at %></p></small>
+<p><%= blog.text %></p>
+<%= link_to "View", blog_path(blog), class: "btn btn-primary" %>
+<% end %>
+
+<br />
+<br />
+<%= link_to "New Car?", new_car_path, class: "btn btn-default" %>
+<%= link_to "New Blog Entry?", new_blog_path, class: "btn btn-default" %>
  

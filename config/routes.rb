@@ -4,6 +4,10 @@ NkuProject::Application.routes.draw do
   resources :users
   resources :students
   resources :sessions
+  resources :blogs do
+    resources :blog_comments
+  end
+  resources :blog_comments
   resources :cars do
     resources :comments
   end
