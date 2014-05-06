@@ -2,7 +2,6 @@ NkuProject::Application.routes.draw do
   get "users/index"
   
   resources :users
-  resources :students
   resources :sessions
   resources :blogs do
     resources :blog_comments
